@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Crear anuncios de Mascota</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Anuncio</button>
+        <button><a href="javascript:history.go(-1)">Volver atrás</a></button>
+{% endblock %}

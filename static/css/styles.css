@@ -1,0 +1,83 @@
+h1 {
+    color: #ff9238;
+    text-align: center;
+    margin-top: 20px;
+    }
+
+    h2 {
+    color: #ff9238;
+    text-align: center;
+    margin-top: 20px;
+    }
+
+    nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    }
+
+    nav ul li {
+    float: left;
+    }
+
+    nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    nav ul li a:hover {
+    background-color: #555;
+    }
+
+    main {
+    padding: 20px;
+    }
+
+    .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    bottom: 0;
+    }
+    .bienvenido_usuario{
+    color: white;
+    float: right;
+    margin: 10px;
+    font-size: 18px;
+    }
+    pre {
+    overflow-y: auto; 
+    white-space: pre-wrap;
+    }
+    .tarjeta_anuncio{
+    background-color: #ffffff;
+    width: 300px; 
+    margin: 10px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    .contenedor_tarjetas{
+    display: flex; 
+    flex-wrap: wrap;
+    }
+    .introduccion_base_titulo{
+    text-align: center;
+    }
+    .introduccion_base_imagen img {
+            width: auto;
+            max-width: 100%; 
+            height: auto; /
+        }
+
+    .introduccion_base_mensaje{
+    text-align: center;
+    }

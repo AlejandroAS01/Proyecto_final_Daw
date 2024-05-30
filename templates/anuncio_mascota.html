@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Detalle del Anuncio</h1>
+    <p>Nombre de la Mascota: {{ anuncio.nombre }}</p>
+    <img src="{{ anuncio.imagen.url }}" alt="Imagen de la mascota">
+    <p>Descripción: {{ anuncio.descripcion }}</p>
+    <p>Fecha de Pérdida: {{ anuncio.fecha_perdida }}</p>
+    <p>Lugar de Pérdida: {{ anuncio.lugar_perdida }}</p>
+    <p>Edad: {{anuncio.edad}}</p>
+    <p>Raza: {{anuncio.raza}}</p>
+    <p>Género: {{anuncio.genero}}</p>
+    <p>Chip: {{anuncio.lleva_chip}}</p>
+    <p>Teléfono de contacto:{{anuncio.telefono_contacto}}</p>
+
+    <!-- Botón para volver atrás -->
+    <button><a href="javascript:history.go(-1)">Volver atrás</a></button>
+    {% endblock %}
+

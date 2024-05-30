@@ -1,0 +1,84 @@
+<!-- Archivo logout.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cierre de sesión</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+        }
+        
+        .login-out-box {
+            margin: auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #f39c12; /* Color naranja */
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+        
+        .login-out-box .login-out-card-body {
+            padding: 0;
+        }
+        
+        .login-out-box .login-out-card-body p {
+            margin-bottom: 10px;
+        }
+        
+        .login-out-box .login-out-card-body .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .login-out-box .login-out-card-body input[type="text"],
+        .login-out-box .login-out-card-body input[type="password"],
+        .login-out-box .login-out-card-body button[type="submit"] {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #f39c12; 
+            color: #000000;
+            padding: 10px;
+            width: 90%;
+            margin-top: 5px;
+        }
+        
+        .login-out-box .login-out-card-body input[type="text"]::placeholder,
+        .login-out-box .login-out-card-body input[type="password"]::placeholder {
+            color: #000000;
+        }
+        
+        .login-box .login-card-body .input-group-text {
+            background-color: #f39c12;
+        }
+        
+        .login-out-box .login-out-card-body button[type="submit"] {
+            background-color: #f39c12; 
+            color: #000;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .login-out-box .login-out-card-body button[type="submit"]:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body class="hold-transition login-out-page">
+    <div class="login-out-box">
+        <div class="card">
+            <div class="card-body login-out-card-body">
+                <h1>Cerrar sesión</h1>
+                <p>Has cerrado la sesión del usuario actual</p>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Volver a inicio</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
