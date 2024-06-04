@@ -15,7 +15,7 @@
             <p>{{ anuncio.raza }}</p>
             <p>{{ anuncio.descripcion }}</p>
             <p>{{ anuncio.telefono_contacto }}</p>
-            <a href="{% url 'anuncio_mascota' anuncio.id %}">Ver detalles</a>
+            <a href="{% url 'anuncio_mascota' anuncio.id %}"><button>Ver detalles</button></a>
         </div>
     {% endfor %}
 </div>

@@ -14,7 +14,7 @@
             <div>
                 <h2>Anuncios Destacados</h1>
                     <div class="contenedor_tarjetas">
-                    {% for anuncio in anuncios %}
+                    {% for anuncio in anuncios|slice:"-3:" %}
                     <div class="tarjeta_anuncio">
                         <h3>{{ anuncio.nombre }}</h3>
                         <img src="{{ anuncio.imagen.url }}" alt="Imagen de la mascota">
@@ -26,7 +26,7 @@
                         <p>{{ anuncio.descripcion }}</p>
                         <p>{{ anuncio.telefono_contacto }}</p>
 
-                        <a href="{% url 'anuncio_mascota' anuncio.id %}">Ver detalles</a>
+                        <a href="{% url 'anuncio_mascota' anuncio.id %}"><button>Ver detalles</button></a>
                     </div>
                 {% endfor %}
             </div>

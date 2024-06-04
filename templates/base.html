@@ -8,100 +8,152 @@
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
         }
-            h1 {
-        color: #ff9238;
-        text-align: center;
-        margin-top: 20px;
+
+        .container {
+            width: 100%;
+            max-width: 1200px; 
+            padding: 20px;
+            box-sizing: border-box; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0; 
+        }
+
+        h1 {
+            color: #ff9238;
+            text-align: center;
+            margin-top: 20px;
         }
 
         h2 {
-        color: #ff9238;
-        text-align: center;
-        margin-top: 20px;
+            color: #ff9238;
+            text-align: center;
+            margin-top: 20px;
         }
 
         nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: #333;
-        overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
         }
 
         nav ul li {
-        float: left;
+            float: left;
         }
 
         nav ul li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
         }
 
         nav ul li a:hover {
-        background-color: #555;
+            background-color: #555;
         }
 
         main {
-        padding: 20px;
+            padding: 20px;
         }
 
         .footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 0;
-        margin-top: 10px;
-        width: 100%;
-        bottom: 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 0;
+            margin-top: 10px;
+            width: 100%;
+            bottom: 0;
         }
         .bienvenido_usuario{
-        color: white;
-        float: right;
-        margin: 10px;
-        font-size: 18px;
+            color: white;
+            float: right;
+            margin: 10px;
+            font-size: 18px;
         }
         pre {
-        overflow-y: auto; 
-        white-space: pre-wrap;
+            overflow-y: auto; 
+            white-space: pre-wrap;
         }
         .tarjeta_anuncio{
-        background-color: #ffffff;
-        width: 300px; 
-        margin: 10px; 
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+            background-color: #ffffff;
+            width: 300px; 
+            margin: 10px; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         .contenedor_tarjetas{
-        display: flex; 
-        flex-wrap: wrap;
+            display: flex; 
+            flex-wrap: wrap;
         }
         .introduccion_base_titulo{
-        text-align: center;
+            text-align: center;
         }
 
         .introduccion_base_imagen {
-        display: flex;
-        justify-content: center;  
-        align-items: center;      
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
         }
         .introduccion_base_imagen img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
+            width: auto;
+            max-width: 100%;
+            height: auto;
         }
 
         .introduccion_base_mensaje{
-        text-align: center;
+            text-align: center;
         }
 
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: #ff0000;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff9238;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
     <h1 >Lost and Found your Pet</h1>
     <nav>
         <ul>
@@ -129,6 +181,7 @@
     <div class="footer">
         <!-- Pie de página común -->
         <p>Derechos de autor © 2023-2024. Todos los derechos reservados.</p>
+    </div>
     </div>
 </body>
 </html>

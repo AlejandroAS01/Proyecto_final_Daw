@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <h1>Detalle del Anuncio</h1>
-    <p>Nombre de la Mascota: {{ anuncio.nombre }}</p>
+<h2>Detalle del Anuncio</h2>
+<div>
+    <h3>Nombre de la Mascota: {{ anuncio.nombre }}</h3>
     <img src="{{ anuncio.imagen.url }}" alt="Imagen de la mascota">
-    <p>Descripción: {{ anuncio.descripcion }}</p>
-    <p>Fecha de Pérdida: {{ anuncio.fecha_perdida }}</p>
-    <p>Lugar de Pérdida: {{ anuncio.lugar_perdida }}</p>
-    <p>Edad: {{anuncio.edad}}</p>
-    <p>Raza: {{anuncio.raza}}</p>
-    <p>Género: {{anuncio.genero}}</p>
-    <p>Chip: {{anuncio.lleva_chip}}</p>
-    <p>Teléfono de contacto:{{anuncio.telefono_contacto}}</p>
-
+    <p><b>Descripción:</b> {{ anuncio.descripcion }}</p>
+    <p><b>Fecha de Pérdida:</b> {{ anuncio.fecha_perdida }}</p>
+    <p><b>Lugar de Pérdida:</b> {{ anuncio.lugar_perdida }}</p>
+    <p><b>Edad:</b> {{anuncio.edad}}</p>
+    <p><b>Raza:</b> {{anuncio.raza}}</p>
+    <p><b>Género:</b> {{anuncio.genero}}</p>
+    <p><b>Chip:</b> {{anuncio.lleva_chip}}</p>
+    <p><b>Teléfono de contacto:</b>{{anuncio.telefono_contacto}}</p>
+</div>
     <!-- Botón para volver atrás -->
-    <button><a href="javascript:history.go(-1)">Volver atrás</a></button>
+    <a href="javascript:history.go(-1)"><button>Volver atrás</button></a>
     {% endblock %}
 
