@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path ,include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.decorators import login_required
 
 from Lost_and_found_Pet import views as Lost_and_found_Pet_views
 from Login import views as Login_views
@@ -31,7 +32,7 @@ urlpatterns = [
     path('', Lost_and_found_Pet_views.home, name="home"),
     path('aviso_legal/', Lost_and_found_Pet_views.aviso_legal, name='aviso_legal'),
     path('anuncios/', Lost_and_found_Pet_views.anuncios, name='anuncios'),
-    path('mi_usuario/', Lost_and_found_Pet_views.mi_usuario, name='mi_usuario'),
+    path('mi_usuario/', login_required(Lost_and_found_Pet_views.mi_usuario), name='mi_usuario'),
 
     # La url que nos permite acceder al inicio de sesion
     path('login/',Login_views.LoginFormView.as_view(),name="login"),
@@ -39,7 +40,7 @@ urlpatterns = [
     # La url para entrar dentro de los anuncios
     path('anuncios/<int:anuncio_id>/', Anuncios_views.detalle_anuncio, name='anuncio_mascota'),
     #La url para crear los anuncios
-    path('crear_anuncio_mascota/', Anuncios_views.crear_anuncio_mascota, name='crear_anuncio_mascota'),
+    path('crear_anuncio_mascota/', login_required(Anuncios_views.crear_anuncio_mascota), name='crear_anuncio_mascota'),
 
 ]
 
