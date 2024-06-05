@@ -10,7 +10,7 @@ class AnuncioMascotaForm(forms.ModelForm):
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'descripcion': forms.Textarea(attrs={'class': 'form-control'}),
             'imagen': forms.ClearableFileInput(attrs={'class': 'form-control'}),
-            'fecha_perdida': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'fecha_perdida': forms.DateInput(attrs={'class': 'form-control'}),
             'lugar_perdida': forms.TextInput(attrs={'class': 'form-control'}),
             'edad': forms.NumberInput(attrs={'class': 'form-control'}),
             'raza': forms.TextInput(attrs={'class': 'form-control'}),

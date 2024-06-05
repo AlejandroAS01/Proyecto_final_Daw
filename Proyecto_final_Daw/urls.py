@@ -41,7 +41,8 @@ urlpatterns = [
     path('anuncios/<int:anuncio_id>/', Anuncios_views.detalle_anuncio, name='anuncio_mascota'),
     #La url para crear los anuncios
     path('crear_anuncio_mascota/', login_required(Anuncios_views.crear_anuncio_mascota), name='crear_anuncio_mascota'),
-
+    #La url para editar los anuncios
+    path('anuncios/<int:anuncio_id>/editar/', Anuncios_views.editar_anuncio, name='editar_anuncio_mascota'),
 ]
 
 

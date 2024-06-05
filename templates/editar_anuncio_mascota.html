@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Editar Anuncio</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a> <button type="submit">Guardar cambios</button></a>
+        <a href="javascript:history.go(-1)"><button>Volver atrás</button></a>
+{% endblock %}

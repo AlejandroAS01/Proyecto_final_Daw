@@ -18,3 +18,15 @@ def crear_anuncio_mascota(request):
 def detalle_anuncio(request, anuncio_id):
     anuncio = get_object_or_404(AnuncioMascota, pk=anuncio_id)
     return render(request, 'anuncio_mascota.html', {'anuncio': anuncio})
+
+def editar_anuncio(request, anuncio_id):
+    anuncio = get_object_or_404(AnuncioMascota, pk=anuncio_id)
+    if request.method == 'POST':
+        form = AnuncioMascotaForm(request.POST, request.FILES, instance=anuncio)
+        if form.is_valid():
+            form.save()
+            return redirect('anuncio_mascota', anuncio_id=anuncio.id)  # Aquí es donde se hace la corrección
+    else:
+        form = AnuncioMascotaForm(instance=anuncio)
+
+    return render(request, 'editar_anuncio_mascota.html', {'form': form})
