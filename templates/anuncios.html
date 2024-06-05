@@ -7,7 +7,7 @@
         {% for anuncio in anuncios %}
         <div class="tarjeta_anuncio">
             <h3>{{ anuncio.nombre }}</h3>
-            <img src="{{ anuncio.imagen.url }}" alt="Imagen de la mascota">
+            <img class="tarjeta_imagen"  src="{{ anuncio.imagen.url }}" alt="Imagen de la mascota">
             <p>{{ anuncio.edad }} años</p>
             <p>{{ anuncio.genero }}</p>
             <p>{{ anuncio.fecha_perdida }}</p>
