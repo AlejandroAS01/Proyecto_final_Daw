@@ -14,8 +14,8 @@
             <div>
                 <h2>Anuncios Destacados</h1>
                     <div class="contenedor_tarjetas">
-                    {% for anuncio in anuncios|slice:"-3:" %}
-                    <div class="tarjeta_anuncio">
+                        {% for anuncio in anuncios%}
+                        <div class="tarjeta_anuncio">
                         <h3>{{ anuncio.nombre }}</h3>
                         <img class="tarjeta_imagen" src="{{ anuncio.imagen.url }}" alt="Imagen de la mascota">
                         <p>{{ anuncio.edad }} años</p>
